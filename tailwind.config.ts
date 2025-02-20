@@ -23,7 +23,7 @@ export default {
           },
       },
       animation:{
-        dropin: 'dropin 0.8s ease-in-out 0.25s 1',
+        dropin: 'dropin 1s ease-in-out 0.3s 1',
       },
       fontFamily: {
         sans: ['var(--font-montserrat)'],

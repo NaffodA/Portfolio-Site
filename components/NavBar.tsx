@@ -8,13 +8,13 @@ const firaSans= Fira_Sans({
 });
 
 export default function Navbar() {
-  const sections = ["home","projects","skills","about" ];
+  const sections = ["home","projects","skills","about","contact" ];
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <nav className="fixed top-0 w-1/4 z-50 flex justify-center gap-1 mt-5 shadow-[0_0px_35px_rgba(227,255,82,0.25)] border-solid rounded-xl bg-slate-500/75 ">
+    <nav className="fixed top-0 w-[600px] z-50 flex justify-center gap-1 mt-5 shadow-[0_0px_35px_rgba(227,255,82,0.25)] border-solid rounded-xl bg-slate-500/75 ">
       {sections.map((section) => (
         <button
           key={section}
