@@ -6,7 +6,7 @@ export default function About(){
             <span className="p-1">My graduation date is expected to be in the Spring of 2026.</span> 
             I have taken up this major because, 
             as a child, I was always fascinated by the mystery behind programmers and their code — how talented people had to be 
-            to create the games I played growing up, as well as the creative, modern, and sophisticated websites and apps I've seen.
+            to create the games I played growing up, as well as the creative, modern, and sophisticated websites and apps I&apos;ve seen.
             I have always wondered how people did what they did. Now, I am learning to become one of those people.
         </section>
     )
