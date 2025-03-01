@@ -24,7 +24,7 @@ export default function Intro(){
                     src="/TypeScript.png"
                     alt="TS logo"
                     width={30}
-                    height={50}
+                    height={30}
                 />
             </div>
             <div className="absolute top-2 left-[180px] ">
@@ -32,7 +32,7 @@ export default function Intro(){
                     src="/nextWhite.png"
                     alt="Next logo"
                     width={30}
-                    height={50}
+                    height={30}
                 />
             </div>
         </>

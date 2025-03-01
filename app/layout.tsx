@@ -19,9 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body
         className={`relative antialiased bg-black ${montserrat.variable} font-sans`}
+        
       >
         {/* Blurred Gradient Background */}
         <div className="absolute inset-0 overflow-hidden -z-10">
