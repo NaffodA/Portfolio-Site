@@ -1,34 +1,57 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 const projects = [
-    {
-      name: "Saucy",
-      description: "An interactive storytelling game where AI generates adventures and choices.",
-      image: "/Robot.png",
-      url: "https://www.saucyclub.co/",
-      github: "https://github.com/WangWNico/HackNYU2025.git",
-      tech: ["/React.png", "/JavaScript.png"],
-    },
-    {
-      name: "Guess The",
-      description: "A guessing game with real-time data fetching and interactive feedback.",
-      image: "/guessTheLogoCom.png",
-      url: "https://your-project-link.com",
-      github: "https://github.com/your-repo.git",
-      tech: ["/React.png", "/JavaScript.png"],
-    },
-  ];
-  
-  export default function Projects() {
-    return (
-      <section id="projects" className="flex flex-col items-center justify-center w-full font-sans">
-        <div className="text-[45px] mt-32">My Projects</div>
-        {projects.map((project, index) => (
-          <div
+  {
+    name: "Saucy",
+    description: "An interactive storytelling game where AI generates adventures and choices.",
+    image: "/Robot.png",
+    url: "https://www.saucyclub.co/",
+    github: "https://github.com/WangWNico/HackNYU2025.git",
+    tech: ["/React.png", "/JavaScript.png"],
+  },
+  {
+    name: "Guess The",
+    description: "A guessing game with real-time data fetching and interactive feedback.",
+    image: "/guessTheLogoCom.png",
+    url: "https://your-project-link.com",
+    github: "https://github.com/your-repo.git",
+    tech: ["/React.png", "/JavaScript.png"],
+  },
+  {
+    name: "AWS Translator",
+    description: "A translator built using aws services that translates in real-time.",
+    image: "/placeholder.png",
+    url: "",
+    github: "",
+    tech: ["/React.png", "/JavaScript.png"],
+  },
+];
+
+export default function Projects() {
+  return (
+    <section id="projects" className="flex flex-col items-center justify-center w-full font-sans">
+      <div className="text-[45px] mt-40 mb-16">My Projects</div>
+      {projects.map((project, index) => {
+        const ref = useRef<HTMLDivElement>(null);
+        const { scrollYProgress } = useScroll({
+          target: ref,
+          offset: ["0 1", "1.33 1"],
+        });
+        const scaleProgress = useTransform(scrollYProgress, [0,1], [0.8,1]);
+        const opacityProgress = useTransform(scrollYProgress, [0,1], [0.7,1]);
+        return (
+          <motion.div
             key={index}
-            className="w-1/3 h-[400px] border border-white/20 rounded-xl bg-white/10 backdrop-blur-lg flex flex-row justify-between items-center
-            mb-8 mt-10 transition-transform duration-300 ease-in-out transform-gpu will-change-transform hover:scale-105 p-6"
+            ref={ref}
+            className="w-1/3 h-[350px] border border-white/20 rounded-xl bg-white/10 backdrop-blur-lg flex flex-row justify-between items-center
+              mb-5 mt-5 p-6"
+            style={{
+              scale: scaleProgress,
+              opacity: opacityProgress,
+            }}
           >
             <div className="w-1/3 flex ml-5 justify-center">
               <Link href={project.url}>
@@ -38,15 +61,15 @@ const projects = [
                   width={200}
                   height={200}
                   className="object-contain"
-                  priority={index === 0}
+                  priority
                 />
               </Link>
             </div>
-  
+
             <div className="w-2/3 flex flex-col justify-center items-center">
               <span className="text-white text-[30px] font-bold">{project.name}</span>
-  
-              <p className="text-white/90 text-center w-[300px] text-[18px] mt-2 ">
+
+              <p className="text-white/90 text-center w-[300px] text-[18px] mt-2">
                 {project.description}
               </p>
 
@@ -67,10 +90,9 @@ const projects = [
                 </a>
               </div>
             </div>
-          </div>
-        ))}
-      </section>
-    );
-  }
-  
-  
+          </motion.div>
+        );
+      })}
+    </section>
+  );
+}

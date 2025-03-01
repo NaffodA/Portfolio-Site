@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="overflow-x-hidden">
+    <html lang="en" className="!scroll-smooth overflow-x-hidden">
       <body
         className={`relative antialiased bg-black ${montserrat.variable} font-sans`}
         
