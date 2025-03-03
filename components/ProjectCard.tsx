@@ -63,12 +63,16 @@ type ProjectProps = {
           </div>
   
           <div className="flex gap-6 mt-4">
+          {project.url && (
             <a href={project.url} target="_blank" rel="noopener noreferrer" className="text-[18px] underline text-blue-500">
-              View Project
+              View Website
             </a>
+          )}
+          {project.github && (
             <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-[18px] underline text-blue-500">
               GitHub
             </a>
+          )}
           </div>
         </div>
       </motion.div>

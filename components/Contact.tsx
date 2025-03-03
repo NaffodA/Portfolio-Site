@@ -37,9 +37,9 @@ function Contact() {
             <div className="w-[600px] h-[550px] border border-white bg-gray-200 rounded-3xl">
                 <form onSubmit={handleSubmit} className="p-5" >
                     <h2 className="font-bold text-[35px] text-black text-center">Contact Me</h2>
-                    <div className="text-[15px] text-black block text-center">You can email edmondhL004@gmail.com or through this form</div>
+                    <div className="text-[15px] text-black block text-center">You can email edmondhL004@gmail.com or complete this form</div>
                     <div>
-                        <label className="text-[20px] text-black mt-3 block">Full Name</label>
+                        <label className="text-[20px] text-black mt-3 block">Name</label>
                         <input type="text" className="border text-black border-black w-full p-2 rounded-md" placeholder="Enter Name" name='name' required />
                     </div>
                     <div>

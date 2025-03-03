@@ -12,17 +12,17 @@ export const projects = [
     name: "Guess The",
     description: "A guessing game with real-time data fetching and interactive feedback.",
     image: "/guessTheLogoCom.png",
-    url: "https://your-project-link.com",
-    github: "https://github.com/your-repo.git",
-    tech: ["/React.png", "/JavaScript.png"],
+    url: "",
+    github: "https://github.com/NaffodA/Guess",
+    tech: ["/React.png", "/JavaScript.png",],
   },
   {
     name: "AWS Translator",
-    description: "A translator built using aws services that translates in real-time.",
+    description: "A translator built using aws services that translates in real-time. (WIP)",
     image: "/placeholder.png",
     url: "",
     github: "",
-    tech: ["/React.png", "/JavaScript.png"],
+    tech: ["/React.png", "/JavaScript.png", "/aws-white.png"],
   },
 ];
 export default function Projects() {

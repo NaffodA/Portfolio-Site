@@ -9,6 +9,7 @@ const skills = [
     { src: "/nextWhite.png", alt: "next", name: "Next" },
     { src: "/HTML5.png", alt: "html", name: "HTML" },
     { src: "/css.png", alt: "css", name: "CSS" },
+    
 ]
 export default function Skills() {
     return (
