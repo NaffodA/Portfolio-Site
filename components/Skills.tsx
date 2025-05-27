@@ -9,6 +9,9 @@ const skills = [
     { src: "/nextWhite.png", alt: "next", name: "Next" },
     { src: "/HTML5.png", alt: "html", name: "HTML" },
     { src: "/css.png", alt: "css", name: "CSS" },
+    { src: "/sql.png", alt: "sql", name: "SQL" },
+    { src: "/kotlin.png", alt: "kotlin", name: "Kotlin" },
+    { src: "/C++.png", alt: "C++", name: "C++" },
     
 ]
 export default function Skills() {
@@ -17,15 +20,14 @@ export default function Skills() {
             <div className="w-1/3 h-[500px] border border-white/20 rounded-xl bg-white/10 backdrop-blur-lg flex flex-col items-center
             transition-transform duration-300 ease-in-out transform-gpu will-change-transform hover:scale-105 p-5">
 
-                <span className="text-[30px] font-bold mb-8">My Skills</span>
+                <span className="text-[30px] font-bold mb-8">Skillset</span>
 
-                <div className="grid grid-cols-3 gap-10 text-white text-center">
+                <div className="grid grid-cols-4 gap-20">
                     {skills.map((skill) => (
                         <div key={skill.name} className="flex flex-col items-center">
-                            <div className="relative">
-                                <Image src={skill.src} alt={skill.alt} width={60} height={60} className="object-contain" priority={false} />
+                            <div>
+                                <Image src={skill.src} alt={skill.alt} width={60} height={60} className="object-contain" />
                             </div>
-                            <span className="mt-2 text-[15px]">{skill.name}</span>
                         </div>
                     ))}
                 </div>
