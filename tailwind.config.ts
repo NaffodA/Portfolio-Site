@@ -44,7 +44,7 @@ export default {
       },
       animation:{
         dropin: 'dropin 1.5s ease-in-out 0.5s 1',
-        flyinup: 'fly-in-up 0.6s ease-in-out 0.25s 1',
+        flyinup: 'fly-in-up 0.6s ease-in-out 0.0s 1',
       },
       fontFamily: {
         sans: ['var(--font-montserrat)'],
